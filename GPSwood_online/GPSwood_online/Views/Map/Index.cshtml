@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_layout.cshtml";
+}
+
+<style>
+    #map {
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<br />
+<div class="row">
+    <div class="container">
+        <div id="map"></div>
+        <script>
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById('map'), {
+                    center: { lat: 39.2075202, lng: 48.4732695 },
+                    zoom: 10
+                });
+            }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAw1S12xsyoVxXdrUmBXtB0GBEDGO0jWsg&callback=initMap"
+                async defer></script>
+
+    </div>
+</div>
